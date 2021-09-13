@@ -154,7 +154,7 @@ def constructFirstFrame(ballX, ballY, ballVX, ballVY, paddleY):
 
                         function renderNextFrame(control, ballX, ballY, ballVX, ballVY, paddleY) {{
                             data = {{"control": control, "ballX": ballX, "ballY": ballY, "ballVX": ballVX, "ballVY": ballVY, "paddleY": paddleY}};
-                            fetch("/render-frame", {{method: "POST", body: JSON.stringify(data)}}).then((data) => data.text()).then((text) => {{console.log("Hi"); document.body.innerHTML = text;}});
+                            fetch("/render-frame", {{method: "POST", body: JSON.stringify(data)}}).then((data) => data.text()).then((text) => {{document.body.innerHTML = text;}});
                         }}
                     </script>
                 </html>"""
